@@ -1,0 +1,22 @@
+[data-toggle="qor.form.inlineEdit"] {
+    .qor-inlineedit__button {
+        display: none;
+        position: static !important;
+        .material-icons {
+            position: static !important;
+            transform: initial !important;
+            font-size: 20px;
+            height: 32px;
+            line-height: 32px;
+            color: unquote("rgba(#{$color-black}, 0.75)");
+        }
+    }
+    .qor-field__show {
+        min-height: 32px;
+        &:hover {
+            .qor-inlineedit__button {
+                display: inline-block;
+            }
+        }
+    }
+}

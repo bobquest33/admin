@@ -5,15 +5,17 @@
   </div>
 {{end}}
 
-<div class="qor-page__body qor-page__show">
+<div class="qor-page__body qor-page__show" data-toggle="qor.form.inlineEdit">
   {{render "shared/flashes"}}
   {{render "shared/errors"}}
 
   <div class="qor-form-container">
     {{if has_update_permission .Resource}}
+      <!--
       <a href="{{join_url (url_for .Result .Resource) "edit"}}" class="mdl-button mdl-button--fab mdl-button--primary mdl-js-button mdl-js-ripple-effect qor-button--edit" data-url="{{join_url (url_for .Result .Resource) "edit"}}">
         <i class="material-icons">edit</i>
       </a>
+      -->
     {{end}}
 
     <form class="qor-form" action="{{url_for .Result .Resource}}" method="POST" enctype="multipart/form-data">
